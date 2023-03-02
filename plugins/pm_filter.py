@@ -63,7 +63,6 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
                 InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'ɪɴꜰᴏ'),
                 InlineKeyboardButton(f'ɪɴꜰᴏ', 'ᴍᴏᴠɪᴇs')
         ]
-
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         temp.PM_BUTTONS[key] = search
