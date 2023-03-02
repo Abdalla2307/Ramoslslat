@@ -525,8 +525,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث', url='https://t.me/ArrowFlix'),
-            InlineKeyboardButton('📢 الــطـلـبـات', url='https://t.me/TorrentSeriess')
+            InlineKeyboardButton('🔍 الــبــحـــث', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('📢 الــطـلـبـات', url='https://t.me/RamadanTv2023')
         ], [
             InlineKeyboardButton('💠 الـمـســاعـدة', callback_data='help'),
             InlineKeyboardButton('🌐 عـن الـبـوت', callback_data='about')
@@ -603,12 +603,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
-    elif query.data == "h77ow":
+    elif query.data == "how":
         buttons = [[
-            InlineKeyboardButton('🪄 لماذا المشاهدة بترجمة خارجية افضل !', callback_data='nhow')
-        ], [
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='start'),
-            InlineKeyboardButton('🔰 اضـافـة التـرجـمة', callback_data='howadd')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(
