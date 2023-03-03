@@ -137,6 +137,7 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton(f'ɪɴꜰᴏ', 'ᴍᴏᴠɪᴇs')
         ]
 
+        )
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         temp.BUTTONS[key] = search
