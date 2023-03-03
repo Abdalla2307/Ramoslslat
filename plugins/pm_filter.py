@@ -70,8 +70,8 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         temp.PM_BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"📄  1 صفحة/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-            InlineKeyboardButton(text="التالي ⏩", callback_data=f"pmnext_{req}_{key}_{offset}")]
+            [InlineKeyboardButton(text=f"📄 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
+            InlineKeyboardButton(text="⏩ التالي", callback_data=f"pmnext_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
