@@ -64,11 +64,6 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
                 InlineKeyboardButton(f'ɪɴꜰᴏ', 'ᴍᴏᴠɪᴇs')
         ]
     )
-    btn.insert(11,
-        [
-            InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')
-        ]
-    )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
