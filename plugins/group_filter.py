@@ -136,12 +136,6 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'ɪɴꜰᴏ'),
                 InlineKeyboardButton(f'ɪɴꜰᴏ', 'ᴍᴏᴠɪᴇs')
         ]
-    )
-    btn.insert(11,
-        [
-            InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlixBot')
-        ]
-    )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
