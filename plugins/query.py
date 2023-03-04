@@ -513,7 +513,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await removebg_white(client, query.message)
     elif query.data == "rmbgplain":
         await removebg_plain(client, query.message)
-elif query.data == "rmbgsticker":
+    elif query.data == "rmbgsticker":
         await removebg_sticker(client, query.message)
     elif query.data == "pages":
         await query.answer("🤨 Curiosity is a little more, isn't it? 😁", show_alert=True)
