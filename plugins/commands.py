@@ -24,8 +24,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('💯 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 & كيفية الاستخدام 💯', callback_data='how')
         ], [
-            InlineKeyboardButton('💎 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/RamadanTv_2023')
+            InlineKeyboardButton('💎 𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/Ramadan2023tv2'),
+            InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/MoslslatRamadan_2023')
         ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
@@ -41,8 +41,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/Ramadan2023tv2'),
+            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/Ramadan2023tv2')
         ], [
             InlineKeyboardButton('💠 الـمـســاعـدة 💠', callback_data='help'),
             InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
@@ -91,8 +91,8 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/Ramadan2023tv2'),
+            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/Ramadan2023tv2')
         ], [
             InlineKeyboardButton('💠 الـمـســاعـدة 💠', callback_data='help'),
             InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
