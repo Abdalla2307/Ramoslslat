@@ -523,13 +523,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("ᴍᴏᴠɪᴇs ʀᴇǫᴜᴇsᴛ ꜰᴏʀᴍᴀᴛ\n▔▔▔▔▔▔▔▔▔▔▔\nɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴀ ᴍᴏᴠɪᴇ ꜰᴏʟʟᴏᴡ ᴛʜᴇ ꜰᴏʀᴍᴀᴛ\n(للبحث عن فيلم اِتبع التنسيق الآتي)\nThe Godfather 1972\nThe Dark Knight 2008 1080p\nDune 2021 720p x265\n\n🚫➠ ᴅᴏɴᴛ ᴜsᴇ ':_(,./)&-", True)
     elif query.data == "start":                        
         buttons = [[
-            InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('💯 𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 & كيفية الاستخدام 💯', callback_data='how')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 𝚂𝙴𝙰𝚁𝙲𝙷', url='https://t.me/ArrowFlix'),
+            InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess')
         ], [
-            InlineKeyboardButton('💠 الـمـســاعـدة 💠', callback_data='help'),
-            InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
+            InlineKeyboardButton('💠 𝙷𝙴𝙻𝙿', callback_data='help'),
+            InlineKeyboardButton('🌐 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -592,7 +592,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙲𝙰𝚁𝙱𝙾𝙽', callback_data='carb'),
             InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
             InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
-InlineKeyboardButton('🔥 كـيـفـيــة الاســتـخــدام 🔥', callback_data='how')
             ],[
             InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats'),
             InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘 🏠', callback_data='start')           
@@ -604,7 +603,10 @@ InlineKeyboardButton('🔥 كـيـفـيــة الاســتـخــدام �
         )
     elif query.data == "how":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help')
+            InlineKeyboardButton('🪄 لماذا المشاهدة بترجمة خارجية افضل !', callback_data='nhow')
+        ], [
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='start'),
+            InlineKeyboardButton('🔰 اضـافـة التـرجـمة', callback_data='howadd')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(
@@ -613,6 +615,8 @@ InlineKeyboardButton('🔥 كـيـفـيــة الاســتـخــدام �
         )
     elif query.data == "about":
         buttons = [[
+            InlineKeyboardButton('⚜️ 𝙾𝚆𝙽𝙴𝚁', url='https://t.me/a_magdy7')
+        ], [
             InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘', callback_data='start'),
             InlineKeyboardButton('𝗖𝗟𝗢𝗦𝗘 🚫', callback_data='close_data')
         ]]
