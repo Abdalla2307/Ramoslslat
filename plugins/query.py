@@ -515,9 +515,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await removebg_plain(client, query.message)
     elif query.data == "rmbgsticker":
         await removebg_sticker(client, query.message)
-    elif query.data == 'معلومة 🔻':
+    elif query.data == 'معلومة':
         await query.answer("تأكد من ان البوت خاص بالمسلسل المطلوب\nاكتب اسم اي مسلسل في الجروب والبوت هيبعته تلقائي\n\n⚠️ملحوظة⚠️\nسيتم حذف الرسالة تلقائي بعد 5 دقايق", True)
-    elif query.data == '❗ مش لاقي المسلسل':
+    elif query.data == 'مش لاقي المسلسل':
         await query.answer("لو مش لاقي المسلسل اكتب اسمه في جروب الطلبات وهنرفعه في اقرب وقت\nملحوظة ⚠️\nطريقة البحث\nمسلسل سوق الكانتو\nمسلسل الكبير الحلقة 1\n", True)
     elif query.data == "start":                        
         buttons = [[
