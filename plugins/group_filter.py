@@ -133,8 +133,8 @@ async def auto_filter(client, msg, spoll=False):
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{req}#{file.file_id}')] for file in files ] 
     btn.insert(0,
         [
-                InlineKeyboardButton(f'❗ مش لاقي المسلسل', ' معلومة 🔻'),
-                InlineKeyboardButton(f'معلومة 🔻', ' ❗ مش لاقي المسلسل')
+                InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
+                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل')
         ]
     )
 
