@@ -58,9 +58,10 @@ async def next_page(bot, query):
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'files#{nxreq}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'files#{nxreq}#{file.file_id}')] for file in files ]
-    btn.insert(10,
+    btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlix2Bot')
+                InlineKeyboardButton(f'❗ لم اجد المسلسل', 'معلومة 🔻'),
+                InlineKeyboardButton(f'❗ لم اجد المسلسل', 'معلومة 🔻'),
         ]
     )
 
@@ -153,9 +154,10 @@ async def pm_next_page(bot, query):
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'pmfile#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
-    btn.insert(10,
+    btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡𝐂𝐡𝐞𝐜𝐤 𝐏𝐌⚡", url='t.me/ArrowFlix2Bot')
+                InlineKeyboardButton(f'❗ لم اجد المسلسل', 'معلومة 🔻'),
+                InlineKeyboardButton(f'❗ لم اجد المسلسل', 'معلومة 🔻'),
         ]
     )
 
