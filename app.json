@@ -94,6 +94,11 @@
             "description": "PM AutoFilter. set True to on / False to off",
             "value": "True",
             "required": false
+        }, 
+        "IMDB_DELET_TIME": {
+            "description": "bot risult aouto delet time in second do to avoid group copyright issue. default is 300 ",
+            "value": "300",
+            "required": false  
         },
         "G_FILTER": {
             "description": "GlobalFilter set True to on / False to off",
