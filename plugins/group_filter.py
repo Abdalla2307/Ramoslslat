@@ -244,7 +244,7 @@ async def advantage_spell_chok(msg):
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
         k = await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023")
-        await asyncio.sleep(8)
+        await asyncio.sleep(20)
         await k.delete()
         return
     temp.SPELL_CHECK[msg.id] = movielist
