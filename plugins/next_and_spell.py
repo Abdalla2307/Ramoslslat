@@ -212,16 +212,3 @@ async def pm_spoll_tester(bot, query):
         await k.delete()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
