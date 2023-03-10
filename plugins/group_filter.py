@@ -251,8 +251,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023")
-        await asyncio.sleep(8)
+        k = await msg.reply("𝟷. تــأكد من البوت خاص بالمسلسل     <a href=https://t.me/MoslslatRamadan_2023/5><b>(قائمة البوتات)</b></a>\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل 👇\nمسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023")
+        await asyncio.sleep(100)
         await k.delete()
         return
     temp.SPELL_CHECK[msg.id] = movielist
@@ -263,7 +263,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023",
+    await msg.reply("𝟷. تــأكد من البوت خاص بالمسلسل     <a href=https://t.me/MoslslatRamadan_2023/5><b>(قائمة البوتات)</b></a>\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل 👇\nمسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023",
                     reply_markup=InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'))
 
 async def manual_filters(client, message, text=False):
