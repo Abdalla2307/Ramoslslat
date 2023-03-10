@@ -60,8 +60,8 @@ async def next_page(bot, query):
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'files#{nxreq}#{file.file_id}')] for file in files ]
     btn.insert(0,
         [
-                InlineKeyboardButton(f'❗ لم اجد المسلسل', 'معلومة 🔻'),
-                InlineKeyboardButton(f'❗ لم اجد المسلسل', 'معلومة 🔻'),
+                InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
+                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل'),
         ]
     )
 
