@@ -187,4 +187,4 @@ async def pm_spoll_choker(msg):
     temp.PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023", reply_to_message_id=msg.id)
+    await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023", InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'), reply_to_message_id=msg.id)
