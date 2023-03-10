@@ -263,7 +263,8 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023")
+    await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023"),
+                    reply_markup=InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess')
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
