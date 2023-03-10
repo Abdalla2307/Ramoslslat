@@ -180,11 +180,11 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023")
-        await asyncio.sleep(8)
+        k = await msg.reply("𝟷. تــأكد من البوت خاص بالمسلسل     <a href=https://t.me/MoslslatRamadan_2023/5><b>(قائمة البوتات)</b></a>\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل 👇\nمسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023")
+        await asyncio.sleep(100)
         await k.delete()
         return
     temp.PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("تــأكد من البوت خاص بالمسلسل\n تــأكد من كتابة المسلسل صحيح مثل،\n مسلسل الكبير - مسلسل الاجهر - مسلسل سوق الكانتو\nانضم لجروبنا اذا واجهك مشكلة\nhttps://t.me/RamadanTV2023", reply_markup=InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'), reply_to_message_id=msg.id)
+    await msg.reply("𝟷. تــأكد من البوت خاص بالمسلسل     <a href=https://t.me/MoslslatRamadan_2023/5><b>(قائمة البوتات)</b></a>\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل 👇\nمسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023", reply_markup=InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'), reply_to_message_id=msg.id)
