@@ -298,7 +298,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check PM, I have sent files in pm\n(تـم ارسـالــه عـلـي الـخــاص)', show_alert=True)
+                await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
@@ -515,6 +515,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await removebg_plain(client, query.message)
     elif query.data == "rmbgsticker":
         await removebg_sticker(client, query.message)
+    elif query.data == "pages":
+        await query.answer("🤨 Curiosity is a little more, isn't it? 😁", show_alert=True)
     elif query.data == 'معلومة':
         await query.answer("لو مش لاقي المسلسل علي البوت اكتب اسمه في جروب الطلبات والبوت هيبعته تلقائي\n\n⭕ طريقة البحث ⭕\nمسلسل العمدة\nمسلسل سوق الكانتو\nمسلسل الكبير الحلقة 1\n", True)
     elif query.data == 'مش لاقي المسلسل':
@@ -588,55 +590,40 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙿𝙸𝙽', callback_data='pin')
             ],[
             InlineKeyboardButton('𝙲𝙰𝚁𝙱𝙾𝙽', callback_data='carb'),
-            InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
-            InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
+            InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='   InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
             ],[
-            InlineKeyboardButton('🔥 كـيـفـيــة الاســتـخــدام 🔥', callback_data='how')
+            InlineKeyboardButton🔮', callback_data='stats')
             ],[
-            InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats'),
-            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘 🏠', callback_data='start')           
+            InlineKeyboardButton('🚫 𝙲𝙻𝙾𝚂𝙴', callback_data='close_data'),
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.edit_message_media(  
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
-    elif query.data == "how":
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)        
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.HOW_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
-            reply_markup=reply_markup,
-        )
     elif query.data == "about":
-        buttons = [[
-            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘', callback_data='start'),
-            InlineKeyboardButton('𝗖𝗟𝗢𝗦𝗘 🚫', callback_data='close_data')
+        buttons= [[
+            InlineKeyboardButton('❣️ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 ❣️', callback_data='source')
+            ],[
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start'),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(
             InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
-            reply_markup=reply_markup,                       
-       )
-    elif query.data == "nhow":
+            reply_markup=reply_markup,           
+        )
+    elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='how')
+            InlineKeyboardButton('SOURCE CODE', url='https://github.com/MrMKN/PROFESSOR-BOT')
+            ],[
+            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)        
+        reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.NHOW_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
-            reply_markup=reply_markup,
-       )
-    elif query.data == "howadd":
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='how')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)        
-        await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.HOWADD_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
-            reply_markup=reply_markup,
+            InputMediaPhoto(random.choice(PICS), script.SOURCE_TXT, enums.ParseMode.HTML),
+            reply_markup=reply_markup,            
         )
     elif query.data == "restric":
         buttons = [[
@@ -788,7 +775,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚙️ 𝙰𝙳𝙼𝙸𝙽 𝙾𝙽𝙻𝚈 ⚙️', callback_data='admin')
             ],[
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help'),
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='help'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -801,7 +788,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙶𝙻𝙾𝙱𝙰𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='gfill'),
             InlineKeyboardButton('𝚄𝚂𝙴𝚁 & 𝙲𝙷𝙰𝚃', callback_data='uschat')
             ],[
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='extra')
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='extra')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         if query.from_user.id in ADMINS:
@@ -811,14 +798,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "gfill":
         buttons = [[            
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='admin')
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='admin')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.G_FIL_TXT, enums.ParseMode.HTML), reply_markup=reply_markup)
         
     elif query.data == "uschat":
         buttons = [[            
-            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='admin')
+            InlineKeyboardButton('🔙 𝙱𝙰𝙲𝙺', callback_data='admin')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), script.US_CHAT_TXT, enums.ParseMode.HTML), reply_markup=reply_markup)
@@ -906,21 +893,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('𝐒𝐈𝐍𝐆𝐋𝐄' if settings["button"] else '𝐃𝐎𝐔𝐁𝐋𝐄',  callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}')
                 ],[
                 InlineKeyboardButton('𝐁𝐎𝐓 𝐏𝐌', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}'),
-                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["botpm"] else '❌ 𝐍𝐎', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}')
+                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["botpm"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}')
                 ],[                
                 InlineKeyboardButton('𝐅𝐈𝐋𝐄 𝐒𝐄𝐂𝐔𝐑𝐄', callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}'),
-                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["file_secure"] else '❌ 𝐍𝐎',  callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}')
+                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["file_secure"] else '🗑️ 𝐍𝐎',  callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}')
                 ],[
                 InlineKeyboardButton('𝐈𝐌𝐃𝐁', callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}'),
-                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["imdb"] else '❌ 𝐍𝐎', callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}')
+                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["imdb"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}')
                 ],[
                 InlineKeyboardButton('𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊', callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}'),
-                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["spell_check"] else '❌ 𝐍𝐎', callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}')
+                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["spell_check"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}')
                 ],[
                 InlineKeyboardButton('𝐖𝐄𝐋𝐂𝐎𝐌𝐄', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
-                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["welcome"] else '❌ 𝐍𝐎', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')               
+                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["welcome"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')               
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
+
+
+
+
 
 
