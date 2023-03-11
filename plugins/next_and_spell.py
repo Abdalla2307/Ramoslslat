@@ -62,7 +62,7 @@ async def next_page(bot, query):
     btn.insert(0,
         [
                 InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
-                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل'),
+                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل')
         ]
     )
 
