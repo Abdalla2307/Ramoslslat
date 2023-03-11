@@ -590,40 +590,55 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙿𝙸𝙽', callback_data='pin')
             ],[
             InlineKeyboardButton('𝙲𝙰𝚁𝙱𝙾𝙽', callback_data='carb'),
-            InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='   InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
+            InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
+            InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
             ],[
-            InlineKeyboardButton🔮', callback_data='stats')
+            InlineKeyboardButton('🔥 كـيـفـيــة الاســتـخــدام 🔥', callback_data='how')
             ],[
-            InlineKeyboardButton('🚫 𝙲𝙻𝙾𝚂𝙴', callback_data='close_data'),
-            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')           
+            InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats'),
+            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘 🏠', callback_data='start')           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.edit_message_media(  
             InputMediaPhoto(random.choice(PICS), script.HELP_TXT.format(query.from_user.mention), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
+    elif query.data == "how":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)        
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.HOW_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
+            reply_markup=reply_markup,
+        )
     elif query.data == "about":
-        buttons= [[
-            InlineKeyboardButton('❣️ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 ❣️', callback_data='source')
-            ],[
-            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start'),
-            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
+        buttons = [[
+            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘', callback_data='start'),
+            InlineKeyboardButton('𝗖𝗟𝗢𝗦𝗘 🚫', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(
             InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
-            reply_markup=reply_markup,           
-        )
-    elif query.data == "source":
+            reply_markup=reply_markup,                       
+       )
+    elif query.data == "nhow":
         buttons = [[
-            InlineKeyboardButton('SOURCE CODE', url='https://github.com/MrMKN/PROFESSOR-BOT')
-            ],[
-            InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='how')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+        reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(
-            InputMediaPhoto(random.choice(PICS), script.SOURCE_TXT, enums.ParseMode.HTML),
-            reply_markup=reply_markup,            
+            InputMediaPhoto(random.choice(PICS), script.NHOW_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
+            reply_markup=reply_markup,
+       )
+    elif query.data == "howadd":
+        buttons = [[
+            InlineKeyboardButton('👩‍🦯 𝗕𝗔𝗖𝗞', callback_data='how')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)        
+        await query.edit_message_media(
+            InputMediaPhoto(random.choice(PICS), script.HOWADD_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
+            reply_markup=reply_markup,
         )
     elif query.data == "restric":
         buttons = [[
