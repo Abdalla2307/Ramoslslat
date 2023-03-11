@@ -58,20 +58,21 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         else:
             btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'{pre}#{req}#{file.file_id}'),
                     InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'{pre}#{file.file_id}')] for file in files ]    
+
     btn.insert(0,
         [
                 InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
-                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل')
+                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل'),
         ]
     )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
-        temp.BUTTONS[key] = search
+        temp.PM_BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton(text=f"📄 𝗣𝗮𝗴𝗲 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
-            InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{offset}")]
+            InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ➡️", callback_data=f"pmnext_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
@@ -188,3 +189,5 @@ async def pm_spoll_choker(msg):
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
     await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
+
+
