@@ -185,6 +185,6 @@ async def pm_spoll_choker(msg):
         await k.delete()
         return
     temp.PM_SPELL_CHECK[msg.id] = movielist
-    btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
+    btn = InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess')
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023</b>", reply_markup=InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TorrentSeriess'))
+    await msg.reply("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023</b>", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
