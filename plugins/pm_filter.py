@@ -180,11 +180,11 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
-        await asyncio.sleep(8)
+        k = await msg.reply("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023</b>")
+        await asyncio.sleep(100)
         await k.delete()
         return
     temp.PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
+    await msg.reply("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023</b>", reply_markup=InlineKeyboardMarkup(btn), reply_to_message_id=msg.id)
