@@ -424,6 +424,9 @@ async def settings(client, message):
             InlineKeyboardButton('𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊', callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}'),
             InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["spell_check"] else '🚫 𝐍𝐎', callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}')
             ],[
+            InlineKeyboardButton('PM 𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊', callback_data=f'setgs#pm_spell_check#{settings["pm_spell_check"]}#{str(grp_id)}'),
+            InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["pm_spell_check"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#pm_spell_check#{settings["pm_spell_check"]}#{str(grp_id)}')
+            ],[
             InlineKeyboardButton('𝐖𝐄𝐋𝐂𝐎𝐌𝐄', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
             InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["welcome"] else '🚫 𝐍𝐎', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')               
         ]]
