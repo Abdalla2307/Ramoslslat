@@ -14,7 +14,6 @@ from plugins.group_filter import global_filters
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
-
 @Client.on_message(filters.private & filters.text & filters.chat(AUTH_USERS) if AUTH_USERS else filters.text & filters.private)
 async def auto_pm_fill(b, m):
     if PMFILTER.strip().lower() in ["true", "yes", "1", "enable", "y"]:       
@@ -38,7 +37,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:               
-                return await pm_spoll_choker(msg)              
+                return await pm_spoll_choker(msg)        
         else:
             return 
     else:
