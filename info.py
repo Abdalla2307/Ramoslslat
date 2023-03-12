@@ -30,7 +30,6 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 PICS = (environ.get('PICS' ,'https://telegra.ph/file/e882593f6ee8bfa1b72ac.jpg https://telegra.ph/file/c2260623c7b97e38f6bc6.jpg https://telegra.ph/file/fee5f07378be2b4cd4349.jpg https://telegra.ph/file/42e6f1c23dbb9f99afd5b.jpg https://telegra.ph/file/c839c0ca1a32b32b6bddb.jpg https://telegra.ph/file/0cd67b69009498eee86a5.jpg https://telegra.ph/file/a2e42e472da3eedd75e1f.jpg https://telegra.ph/file/faf89e1a5d51fe77e55d9.jpg https://telegra.ph/file/53cbaf175da2886361f60.jpg https://telegra.ph/file/263b4c37303c54a0766e7.jpg https://telegra.ph/file/8041f8221ab864567f401.jpg https://telegra.ph/file/ee02c7abdbe9d79d7f5da.jpg https://telegra.ph/file/0332804552124ba067fbf.jpg https://telegra.ph/file/bf84b71822b34dc55bdd8.jpg https://telegra.ph/file/e07fe924a5f0fe5338fc2.jpg')).split()
 BOT_START_TIME = time()
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2a888a370f479f4338f7c.jpg")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
