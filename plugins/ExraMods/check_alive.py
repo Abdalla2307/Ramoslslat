@@ -4,9 +4,9 @@ from pyrogram import Client, filters
 
 CMD = ["/", "."]
 
-@Client.on_message(filters.command("alive", CMD))
+@Client.on_message(filters.command("help", CMD))
 async def check_alive(_, message):
-    await message.reply_text("👍 انت تمام")
+    await message.reply_text("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة تواصل معنا. \nhttps://t.me/RamadanTV2023</b>")
 
 
 @Client.on_message(filters.command("ping", CMD))
