@@ -591,9 +591,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
             InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
             ],[
-            InlineKeyboardButton('🔥 كـيـفـيــة الاســتـخــدام 🔥', callback_data='how')
-            ],[
-            InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats'),
+            InlineKeyboardButton('🔥 طريقة الاســتـخــدام 🔥', callback_data='how'),
             InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘 🏠', callback_data='start')           
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
