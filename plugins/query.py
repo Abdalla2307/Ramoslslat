@@ -516,17 +516,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rmbgsticker":
         await removebg_sticker(client, query.message)
     elif query.data == 'معلومة':
-        await query.answer("لو مش لاقي المسلسل علي البوت اكتب اسمه في جروب الطلبات والبوت هيبعته تلقائي\n\n⭕ طريقة البحث ⭕\nمسلسل العمدة\nمسلسل سوق الكانتو\nمسلسل الكبير الحلقة 1\n", True)
+        await query.answer("لو مش لاقي المسلسل علي البوت اكتب اسمه في جروب الطلبات والبوت هيبعته تلقائي\n\n<b>[طريقة البحث]</b>\nمسلسل العمدة\nمسلسل سوق الكانتو\nمسلسل الكبير الحلقة 1\n", True)
     elif query.data == 'مش لاقي المسلسل':
-        await query.answer("تأكد من ان البوت خاص بالمسلسل المطلوب\nعلي الجروب متوفر جميع مسلسلات رمضان فقط اكتب اسم المسلسل والبوت هيبعته تلقائي بعد اختصار الرابط\n\n⚠️ملحوظة⚠️\nسيتم حذف الرسالة تلقائي بعد 5 دقايق", True)
+        await query.answer("تأكد من ان البوت خاص بالمسلسل المطلوب\n\nعلي الجروب متوفر جميع مسلسلات رمضان فقط اكتب اسم المسلسل والبوت هيبعته تلقائي بعد اختصار الرابط\n\n⚠️ملحوظة⚠️\nسيتم حذف الرسالة تلقائي بعد 10 دقايق", True)
     elif query.data == "start":                        
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('📢 الـطلبـات 📢', url='https://t.me/RamadanTv2023')
         ], [
-            InlineKeyboardButton('💠 الـمـســاعـدة 💠', callback_data='help'),
+            InlineKeyboardButton('❓ شرح الاستخدام ❓', callback_data='how'),
+            InlineKeyboardButton('🤖 البـوتـات 🤖', url='https://t.me/RamadanTv2023')
+        ], [
+            InlineKeyboardButton('🧲 الـمـســاعـدة 🧲', callback_data='help'),
             InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -591,8 +594,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
             InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
             ],[
-            InlineKeyboardButton('🔥 طريقة الاســتـخــدام 🔥', callback_data='how'),
-            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘 🏠', callback_data='start')           
+            InlineKeyboardButton('الرئيسية 🏠', callback_data='start'),
+            InlineKeyboardButton('🚫 اغــلاق', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)             
         await query.edit_message_media(  
@@ -610,8 +613,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🏠 𝗛𝗢𝗠𝗘', callback_data='start'),
-            InlineKeyboardButton('𝗖𝗟𝗢𝗦𝗘 🚫', callback_data='close_data')
+            InlineKeyboardButton('🏠 الرئيسية', callback_data='start'),
+            InlineKeyboardButton('اغــلاق 🚫', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)        
         await query.edit_message_media(
