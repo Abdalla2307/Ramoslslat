@@ -41,12 +41,12 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الـبـحــث', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الـطلبـات', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('🤖 البـوتـات', url='https://t.me/MoslslatRamadan_2023/5')
+            InlineKeyboardButton('الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('الـطلبـات 📢', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('البـوتـات 🤖', url='https://t.me/MoslslatRamadan_2023/5')
         ], [
-            InlineKeyboardButton('🧲 إضــافــات', callback_data='help'),
-            InlineKeyboardButton('🌐 عـن الـبـوت', callback_data='about')
+            InlineKeyboardButton('إضــافــات 🧲', callback_data='help'),
+            InlineKeyboardButton('عـن الـبـوت 🌐', callback_data='about')
         ], [
             InlineKeyboardButton('❓ طريقة الاستخدام ❓', callback_data='how')
         ]]
@@ -94,12 +94,12 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الـبـحــث', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الـطلبـات', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('🤖 البـوتـات', url='https://t.me/MoslslatRamadan_2023/5')
+            InlineKeyboardButton('الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('الـطلبـات 📢', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('البـوتـات 🤖', url='https://t.me/MoslslatRamadan_2023/5')
         ], [
-            InlineKeyboardButton('🧲 إضــافــات', callback_data='help'),
-            InlineKeyboardButton('🌐 عـن الـبـوت', callback_data='about')
+            InlineKeyboardButton('إضــافــات 🧲', callback_data='help'),
+            InlineKeyboardButton('عـن الـبـوت 🌐', callback_data='about')
         ], [
             InlineKeyboardButton('❓ طريقة الاستخدام ❓', callback_data='how')
         ]]
