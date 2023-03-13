@@ -41,10 +41,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('📢 الـطلبـات 📢', url='https://t.me/RamadanTv2023')
         ], [
-            InlineKeyboardButton('💠 الـمـســاعـدة 💠', callback_data='help'),
+            InlineKeyboardButton('❓ شرح الاستخدام ❓', callback_data='how'),
+            InlineKeyboardButton('🤖 البـوتـات 🤖', url='https://t.me/RamadanTv2023')
+        ], [
+            InlineKeyboardButton('🧲 إضــافــات 🧲', callback_data='help'),
             InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -91,10 +94,13 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الــبــحـــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الــطـلـبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('📢 الـطلبـات 📢', url='https://t.me/RamadanTv2023')
         ], [
-            InlineKeyboardButton('💠 الـمـســاعـدة 💠', callback_data='help'),
+            InlineKeyboardButton('❓ شرح الاستخدام ❓', callback_data='how'),
+            InlineKeyboardButton('🤖 البـوتـات 🤖', url='https://t.me/RamadanTv2023')
+        ], [
+            InlineKeyboardButton('🧲 إضــافــات 🧲', callback_data='help'),
             InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
