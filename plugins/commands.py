@@ -41,14 +41,14 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الـطلبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الـبـحــث', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('📢 الـطلبـات', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('🤖 البـوتـات', url='https://t.me/MoslslatRamadan_2023/5')
         ], [
-            InlineKeyboardButton('❓ شرح الاستخدام ❓', callback_data='how'),
-            InlineKeyboardButton('🤖 البـوتـات 🤖', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🧲 إضــافــات', callback_data='help'),
+            InlineKeyboardButton('🌐 عـن الـبـوت', callback_data='about')
         ], [
-            InlineKeyboardButton('🧲 إضــافــات 🧲', callback_data='help'),
-            InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
+            InlineKeyboardButton('❓ طريقة الاستخدام ❓', callback_data='how')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
@@ -94,14 +94,14 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🔍 الـبـحــث 🔍', url='https://t.me/RamadanTv2023'),
-            InlineKeyboardButton('📢 الـطلبـات 📢', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🔍 الـبـحــث', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('📢 الـطلبـات', url='https://t.me/RamadanTv2023'),
+            InlineKeyboardButton('🤖 البـوتـات', url='https://t.me/MoslslatRamadan_2023/5')
         ], [
-            InlineKeyboardButton('❓ شرح الاستخدام ❓', callback_data='how'),
-            InlineKeyboardButton('🤖 البـوتـات 🤖', url='https://t.me/RamadanTv2023')
+            InlineKeyboardButton('🧲 إضــافــات', callback_data='help'),
+            InlineKeyboardButton('🌐 عـن الـبـوت', callback_data='about')
         ], [
-            InlineKeyboardButton('🧲 إضــافــات 🧲', callback_data='help'),
-            InlineKeyboardButton('🌐 عـن الـبـوت 🌐', callback_data='about')
+            InlineKeyboardButton('❓ طريقة الاستخدام ❓', callback_data='how')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
