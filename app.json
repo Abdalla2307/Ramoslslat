@@ -53,12 +53,7 @@
         },           
         "MAX_RIST_BTNS": {
             "description": "Maximum number of serch result buttons count ⚠️below 10 only ",
-            "value": "10",
-            "required": false
-        },
-        "CUSTOM_FILE_CAPTION": {
-            "description": "A custom file caption for your files. formatable with , file_name, file_caption, file_size, Read Readme.md for better understanding.",
-            "value": "مرحبا {mention} 👋\n<code>{file_caption}</code> \n‌●الحجم : {file_size}\n\n➲ [مسلسلات رمضان](https://t.me/MoslslatRamadan_2023)\n➲ [جروب الطلبات](https://t.me/RamadanTV2023)</b>",
+            "value": "6",
             "required": false
         },
         "DATABASE_URI": {
@@ -82,7 +77,7 @@
         },
         "START_MESSAGE": {
             "description": "bot start message text [ {user} = bot startd user name {bot} = your bot name",
-            "value": "مرحبا 👋 {user}\n\nبوت لــ{bot},\nفقط اكتب اسم المسلسل هنا وسوف ارسله لك",
+            "value": " مرحبا بك 👋 {user} في بوت مسلسلات رمضان 2023\n\nهذا البوت خاص بــ/n/n/n لباقي المسلسلات [اضغط هنا](https://t.me/MoslslatRamadan_2023/5)",
             "required": false
         },       
         "FORCE_SUB_TEXT": {
