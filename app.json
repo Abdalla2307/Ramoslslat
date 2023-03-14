@@ -70,11 +70,6 @@
             "value": "Telegram_files",
             "required": false        
         },
-        "SINGLE_BUTTON": {
-            "description": "choose b/w single or double buttons https://github.com/Aadhi000/Ajax/issues/22",
-            "value": "True",
-            "required": false         
-        },
         "START_MESSAGE": {
             "description": "bot start message text [ {user} = bot startd user name {bot} = your bot name",
             "value": "<b>👋 مرحبا بك {user} في بوت مسلسلات رمضان 2023\n\nهذا البوت خاص بــ\n<i> \n </i>\nلباقي المسلسلات </b><a href=https://t.me/MoslslatRamadan_2023/5><b>اضغط هنا</b></a>",
@@ -97,16 +92,6 @@
         },
         "G_FILTER": {
             "description": "GlobalFilter set True to on / False to off",
-            "value": "True",
-            "required": false
-        },
-        "BUTTON_LOCK": {
-            "description": "Button alert set True to on / False to off",
-            "value": "True",
-            "required": false
-        },
-        "P_TTI_SHOW_OFF": { 
-            "description": "Customize Result Buttons to Callback or Url by (True = url / False = callback)",
             "value": "True",
             "required": false
         }
