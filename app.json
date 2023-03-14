@@ -77,7 +77,7 @@
         },
         "START_MESSAGE": {
             "description": "bot start message text [ {user} = bot startd user name {bot} = your bot name",
-            "value": " مرحبا بك 👋 {user} في بوت مسلسلات رمضان 2023\n\nهذا البوت خاص بــ/n/n/n لباقي المسلسلات [اضغط هنا](https://t.me/MoslslatRamadan_2023/5)",
+            "value": "<b>👋 مرحبا بك {user} في بوت مسلسلات رمضان 2023\n\nهذا البوت خاص بــ\n<i> \n </i>\nلباقي المسلسلات </b><a href=https://t.me/MoslslatRamadan_2023/5><b>اضغط هنا</b></a>",
             "required": false
         },       
         "FORCE_SUB_TEXT": {
