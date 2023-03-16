@@ -251,7 +251,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة منشن للادمن.</b>")
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -263,7 +263,8 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("<b>𝟷. تــأكد ان البوت خاص بالمسلسل <a href=https://t.me/MoslslatRamadan_2023/5>(قـائمة البوتـات)</a>\n\n𝟸. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟹. لو مش لاقي المسلسل او فيه مشكلة منشن للادمن.</b>")
+    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+                    reply_markup=InlineKeyboardMarkup(btn))
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
