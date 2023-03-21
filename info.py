@@ -48,7 +48,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 #maximum search result buttos count in number#
 MAX_RIST_BTNS = int(environ.get('MAX_RIST_BTNS', "5"))
-START_MESSAGE = environ.get('START_MESSAGE', '<b>👋 مرحبا بك {user} في بوت مسلسلات رمضان 2023\n\nهذا البوت خاص بــ\n\n<code>مسلسل الكبير<code> - <code>مسلسل رمضان كريم<code>\n<code>مسلسل الصفارة<code> - <code>مسلسل اكس لانس<code>/n<code>مسلسل كامل العدد<code> - <code>رامز نيفر اند<code></i>\n\nلباقي المسلسلات </b><a href=https://t.me/MoslslatRamadan_2023/5><b>اضغط هنا</b></a>')
+START_MESSAGE = environ.get('START_MESSAGE', '<b>👋 مرحبا بك {user} في بوت مسلسلات رمضان 2023\n\nهذا البوت خاص بــ</b>\n\n<code>مسلسل الكبير</code> - <code>مسلسل رمضان كريم</code>\n<code>مسلسل الصفارة</code> - <code>مسلسل اكس لانس</code>\n<code>مسلسل كامل العدد</code> - <code>رامز نيفر اند</code></i>\n\nلباقي المسلسلات </b><a href=https://t.me/MoslslatRamadan_2023/5><b>اضغط هنا</b></a>')
 BUTTON_LOCK_TEXT = environ.get("BUTTON_LOCK_TEXT", "⚠️ 𝙃𝙚𝙮 {query}! 𝙏𝙝𝙖𝙩'𝙨 𝙉𝙤𝙩 𝙁𝙤𝙧 𝙔𝙤𝙪. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙍𝙚𝙦𝙪𝙚𝙨𝙩 𝙔𝙤𝙪𝙧 𝙊𝙬𝙣")
 FORCE_SUB_TEXT = environ.get('FORCE_SUB_TEXT', 'يرجي الاشترك في القناة لاستخدام البوت')
 RemoveBG_API = environ.get("RemoveBG_API", "")
