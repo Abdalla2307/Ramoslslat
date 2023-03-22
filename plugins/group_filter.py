@@ -187,7 +187,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b><i>✅ المسلسل الذي بحثت عنه هو</i></b> 🔍 <_>{search}</_>"
+        cap = f"<b><i>✅ المسلسل الذي بحثت عنه هو</i></b>\n 🔍 <code>{search}</code>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
