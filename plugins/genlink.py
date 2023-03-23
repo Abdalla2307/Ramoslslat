@@ -103,7 +103,7 @@ async def gen_link_batch(bot, message):
                 file = {
                     "file_id": file.file_id,
                     "caption": caption,
-                    "title": getattr(file, "file_caption", ""),
+                    "title": getattr(file, "file_name", ""),
                     "size": file.file_size,
                     "protect": cmd.lower().strip() == "/pbatch",
                 }
