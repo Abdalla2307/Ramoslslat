@@ -62,12 +62,7 @@ async def next_page(bot, query):
         [
                 InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')        ]
     )
-    btn.insert(1,
-        [
-                InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
-                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل')
-        ]
-    )
+
 
     if 0 < offset <= 10:
         off_set = 0
