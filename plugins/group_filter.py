@@ -135,12 +135,6 @@ async def auto_filter(client, msg, spoll=False):
         [
                 InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')        ]
     )
-    btn.insert(1,
-        [
-                InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
-                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل')
-        ]
-    )
 
 
     if offset != "":
@@ -192,7 +186,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b><i>👋 مرحبا {message.from_user.mention}</i></b>\n✅ <b>مسلسلك جاهز\n⚡الحلقات الجديدة هيتم اضافتها يوميا</b>"
+        cap = f"✅ <b>مسلسلك جاهز يــا {message.from_user.mention}\n⚡الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
