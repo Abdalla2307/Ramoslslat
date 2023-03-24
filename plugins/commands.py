@@ -226,7 +226,7 @@ async def start(client, message):
                 )
             filetype = msg.media
             file = getattr(msg, filetype)
-            title = file.file_caption
+            title = file.file_name
             size=get_size(file.file_size)
             f_caption = f"<code>{title}</code>"
             if CUSTOM_FILE_CAPTION:
@@ -240,7 +240,7 @@ async def start(client, message):
             pass
         return await message.reply('No such file exist.')
     files = files_[0]
-    title = files.file_caption
+    title = files.file_name
     size=get_size(files.file_size)
     f_caption=files.caption
     if CUSTOM_FILE_CAPTION:
@@ -324,9 +324,9 @@ async def delete(bot, message):
     if result.deleted_count:
         await msg.edit('File is successfully deleted from database')
     else:
-        file_caption = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_caption))
+        file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
-            'file_caption': file_caption,
+            'file_name': file_name,
             'file_size': media.file_size,
             'mime_type': media.mime_type
             })
@@ -336,7 +336,7 @@ async def delete(bot, message):
             # files indexed before https://github.com/EvamariaTG/EvaMaria/commit/f3d2a1bcb155faf44178e5d7a685a1b533e714bf#diff-86b613edf1748372103e94cacff3b578b36b698ef9c16817bb98fe9ef22fb669R39 
             # have original file name.
             result = await Media.collection.delete_many({
-                'file_caption': media.file_caption,
+                'file_name': media.file_name,
                 'file_size': media.file_size,
                 'mime_type': media.mime_type
             })
