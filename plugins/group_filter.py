@@ -191,24 +191,24 @@ async def auto_filter(client, msg, spoll=False):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
-            await hehe.delete()            
+            await hehe.delete(10)            
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))           
             await asyncio.sleep(IMDB_DELET_TIME)
-            await hmm.delete()            
+            await hmm.delete(10)            
         except Exception as e:
             logger.exception(e)
             cdb = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
-            await cdb.delete()
+            await cdb.delete(10)
     else:
         crl = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(IMDB_DELET_TIME)
-        await crl.delete()        
+        await crl.delete(10)        
     if spoll:
-        await msg.message.delete()
+        await msg.message.delete(10)
 
 
 
@@ -338,8 +338,8 @@ async def global_filters(client, message, text=False):
                                 reply_to_message_id=reply_id
                             )
                             await asyncio.sleep(IMDB_DELET_TIME)
-                            await knd3.delete()
-                            await message.delete()
+                            await knd3.delete(10)
+                            await message.delete(10)
 
                         else:
                             button = eval(btn)
@@ -351,8 +351,8 @@ async def global_filters(client, message, text=False):
                                 reply_to_message_id=reply_id
                             )
                             await asyncio.sleep(IMDB_DELET_TIME)
-                            await knd2.delete()
-                            await message.delete()
+                            await knd2.delete(10)
+                            await message.delete(10)
 
                     elif btn == "[]":
                         knd1 = await client.send_cached_media(
@@ -362,8 +362,8 @@ async def global_filters(client, message, text=False):
                             reply_to_message_id=reply_id
                         )
                         await asyncio.sleep(IMDB_DELET_TIME)
-                        await knd1.delete()
-                        await message.delete()
+                        await knd1.delete(10)
+                        await message.delete(10)
 
                     else:
                         button = eval(btn)
@@ -374,8 +374,8 @@ async def global_filters(client, message, text=False):
                             reply_to_message_id=reply_id
                         )
                         await asyncio.sleep(IMDB_DELET_TIME)
-                        await knd.delete()
-                        await message.delete()
+                        await knd.delete(10)
+                        await message.delete(10)
 
                 except Exception as e:
                     logger.exception(e)
