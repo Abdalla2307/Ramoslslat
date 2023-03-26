@@ -186,7 +186,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"✅ <b>المسلسل جاهز\n⚡الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني</b>"
+        cap = f"✅ <b>المسلسل جاهز\n⚡الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n⚠️ يتم حذف الرسالة تلقائي بعد 30 ثانية</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
