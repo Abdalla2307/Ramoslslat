@@ -136,6 +136,11 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')        ]
     )
 
+    btn.insert(11,
+        [
+            InlineKeyboardButton(text="⚡طريقة تخطي الرابط⚡", url='https://t.me/ElKberAwyBot?start=BATCH-BQADBAADQQ8AAsPvGVHODQY5waeSRxYE')
+        ]
+    )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
