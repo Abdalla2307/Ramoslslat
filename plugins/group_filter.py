@@ -138,7 +138,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(11,
         [
-            InlineKeyboardButton(text="⚡طريقة تخطي الرابط⚡", url='https://t.me/El3omdaBot?start=BATCH-BQADBAADIBEAAsPvIVEHdGLWl5kaHxYE')
+            InlineKeyboardButton(text="💥<b> طــريـقـة تـخـطـي الـرابـط </b>💥", url='https://t.me/El3omdaBot?start=BATCH-BQADBAADIBEAAsPvIVEHdGLWl5kaHxYE')
         ]
     )
 
@@ -191,7 +191,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"✅ <b>المسلسل جاهز\n\n⚡ الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n\n⚠️ يتم حذف الرسالة تلقائي بعد ثواني</b>"
+        cap = f"✅ <b>المسلسل جاهز\n\n⚡ الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n\n🔗 بعد تخطي الرابط يرسل لك البوت الحلقه\n\n⚠️ يتم حذف الرسالة تلقائي بعد ثواني</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
