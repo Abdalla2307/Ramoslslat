@@ -138,7 +138,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(11,
         [
-            InlineKeyboardButton(text="💥<b> طــريـقـة تـخـطـي الـرابـط </b>💥", url='https://t.me/El3omdaBot?start=BATCH-BQADBAADIBEAAsPvIVEHdGLWl5kaHxYE')
+            InlineKeyboardButton(text="💥 طــريـقـة تـخـطـي الـرابـط 💥", url='https://t.me/El3omdaBot?start=BATCH-BQADBAADIBEAAsPvIVEHdGLWl5kaHxYE')
         ]
     )
 
