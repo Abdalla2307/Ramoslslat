@@ -58,8 +58,8 @@ G_FILTER = bool(environ.get("G_FILTER", True))
 BUTTON_LOCK = environ.get("BUTTON_LOCK", "False")
 
 # url shortner
-SHORT_URL = environ.get("SHORT_URL")
-SHORT_API = environ.get("SHORT_API")
+SHORT_URL = environ.get('SHORT_URL', 'https://short-jambo.com') 
+SHORT_API = environ.get('SHORT_API', '5bdf593a646913a46563062cd306bb66a9ae2b9c')
 
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "61"))
@@ -69,8 +69,8 @@ P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 PM_IMDB = environ.get('PM_IMDB', "False")
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_name}</b>\n\n⚙️ <b>الـحـجـم</b> {file_size}\n\n||👋 مرحبا {mention} لاتنسي المشاركة مع اصحابك||\n❍ <b>[مسلسلات رمضان](https://t.me/MoslslatRamadan_2023)</b>\n❍ <b>[جـروب الــطـلبـات](https://t.me/RamadanTV2023)</b>")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "👋 مرحبا {mention}")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_name}</b>\n\n⚙️ <b>الـحـجـم</b> {file_size}\n\n||👋 مرحبا {mention} لاتنسي المشاركة مع اصحابك||\n❍ <b>❍ <b>[جـروب البحث](https://t.me/RamadanTV0)</b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🔮 ᴛɪᴛᴛʟᴇ : <a href={url}>{title}</a>\n📆 ʏᴇᴀʀ : {year}\n🎭 ɢᴇɴʀᴇ : {genres}\n🌟 ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating} IMDB</a>\n⏰ ʀᴜɴᴛɪᴍᴇ : {runtime} 𝙼𝚒𝚗𝚞𝚝𝚎𝚜\n🔹 sᴇᴀsᴏɴs : {seasons}\n🎙️ ʟᴀɴɢᴜᴀɢᴇ : {languages}\n🌍 ᴄᴏᴜɴᴛʀɪᴇs : {countries}\n📝 sᴛᴏʀʏ : {plot} \n\n  ⚡️Pᴏᴡᴇʀᴇᴅ Bʏ : <a href=https://t.me/TorrentSeriess><b>AʀʀᴏᴡFʟɪx</b></a>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
