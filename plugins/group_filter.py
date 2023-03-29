@@ -186,7 +186,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"✅ <b>المسلسل جاهز\n⚡الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n⚠️ يتم حذف الرسالة تلقائي بعد ثواني</b>"
+        cap = f"✅ <b>المسلسل جاهز\n\n⚡ الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n\n⚠️ يتم حذف الرسالة تلقائي بعد ثواني</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
