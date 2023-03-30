@@ -62,7 +62,7 @@ SHORT_URL = environ.get('SHORT_URL', 'https://short-jambo.com')
 SHORT_API = environ.get('SHORT_API', '5bdf593a646913a46563062cd306bb66a9ae2b9c')
 
 # Others
-IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "61"))
+IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "200"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'ArrowFlix Discussion | Series & Movies')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
