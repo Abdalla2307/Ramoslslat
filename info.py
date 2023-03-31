@@ -71,7 +71,7 @@ IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_name}</b>\n\n⚙️ <b>الـحـجـم</b> {file_size}\n\n||👋 مرحبا {mention} لاتنسي المشاركة مع اصحابك||\n❍ <b>❍ <b>[جـروب البحث](https://t.me/RamadanTV0)</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🔮 ᴛɪᴛᴛʟᴇ : <a href={url}>{title}</a>\n📆 ʏᴇᴀʀ : {year}\n🎭 ɢᴇɴʀᴇ : {genres}\n🌟 ʀᴀᴛɪɴɢ : <a href={url}/ratings>{rating} IMDB</a>\n⏰ ʀᴜɴᴛɪᴍᴇ : {runtime} 𝙼𝚒𝚗𝚞𝚝𝚎𝚜\n🔹 sᴇᴀsᴏɴs : {seasons}\n🎙️ ʟᴀɴɢᴜᴀɢᴇ : {languages}\n🌍 ᴄᴏᴜɴᴛʀɪᴇs : {countries}\n📝 sᴛᴏʀʏ : {plot} \n\n  ⚡️Pᴏᴡᴇʀᴇᴅ Bʏ : <a href=https://t.me/TorrentSeriess><b>AʀʀᴏᴡFʟɪx</b></a>")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "✅ <b>المسلسل جاهز\n\n⚡ الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n\n🔗 بعد تخطي الرابط يرسل لك البوت الحلقه\n\n<a href=https://t.me/Ramadan_Series7/><b>لمشاهدة الحلقات القديمة كاملة اضغط هنا</b></a></b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 PM_SPELL_CHECK = is_enabled(environ.get("PM_SPELL_CHECK", "True"), True)
