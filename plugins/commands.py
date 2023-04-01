@@ -63,14 +63,14 @@ async def start(client, message):
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
-            creates_join_request = await client.creates_join_request(int(AUTH_CHANNEL))
+            join_request = await client.create_chat_join_request(int(AUTH_CHANNEL))
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=creates_join_request.creates_join_request
+                    "🤖 Join Updates Channel", url=join_request.join_request
                 )
             ]
         ]
