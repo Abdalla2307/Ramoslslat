@@ -118,7 +118,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         )
     else:
         cap = f"<b><i>المسلسل الذي بحثت عنه هو</i></b> {search}"
-            hehe = await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg")
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
