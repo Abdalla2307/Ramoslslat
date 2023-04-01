@@ -98,7 +98,7 @@ async def send_for_index(bot, message):
 
     if type(chat_id) is int:
         try:
-            link = (await bot.create_chat_invite_link(chat_id)).invite_link
+            link = (await bot.create_chat_telegram.ChatInviteLink(chat_id)).telegram.ChatInviteLink
         except ChatAdminRequired:
             return await message.reply('Make sure iam an admin in the chat and have permission to invite users.')
     else:
