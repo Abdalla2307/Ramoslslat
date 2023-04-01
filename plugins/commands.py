@@ -63,14 +63,14 @@ async def start(client, message):
         return
     if AUTH_CHANNEL and not await is_subscribed(client, message):
         try:
-            telegram.ChatInviteLink = await client.create_chat_telegram.ChatInviteLink(int(AUTH_CHANNEL))
+            create_chat_join_request = await client.create_chat_join_request(int(AUTH_CHANNEL))
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=telegram.ChatInviteLink.telegram.ChatInviteLink
+                    "🤖 Join Updates Channel", url=create_chat_join_request.create_chat_join_request
                 )
             ]
         ]
