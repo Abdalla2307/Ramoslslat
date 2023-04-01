@@ -98,7 +98,7 @@ async def send_for_index(bot, message):
 
     if type(chat_id) is int:
         try:
-            link = (await bot.create_chat_join_request(chat_id)).join_request
+            link = (await bot.create_join_request(chat_id)).join_request
         except ChatAdminRequired:
             return await message.reply('Make sure iam an admin in the chat and have permission to invite users.')
     else:
