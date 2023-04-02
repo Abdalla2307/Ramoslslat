@@ -82,11 +82,11 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await client.send_message(
-            chat_id=message.from_user.id,
-            text=FORCE_SUB_TEXT,
-            reply_markup=InlineKeyboardMarkup(btn),
-            parse_mode=enums.ParseMode.DEFAULT
+        await message.reply_photo(
+            photo=random.choice(PICS),
+            caption=FORCE_SUB_TEXT.format(user=message.from_user.mention, bot=temp.B_LINK),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
