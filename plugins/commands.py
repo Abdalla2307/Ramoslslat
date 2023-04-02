@@ -82,7 +82,7 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
                 btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-        await message.reply_photo(
+        await client.send_message(
             photo=random.choice(PICS),
             chat_id=message.from_user.id,
             text=FORCE_SUB_TEXT,
