@@ -160,12 +160,12 @@ async def gen_invite(bot, message):
     except:
         return await message.reply('Give Me A Valid Chat ID')
     try:
-        link = await bot.creates_join_request(chat)
+        link = await bot.create_chat_invite_link(chat)
     except ChatAdminRequired:
         return await message.reply("Invite Link Generation Failed, Iam Not Having Sufficient Rights")
     except Exception as e:
         return await message.reply(f'Error {e}')
-    await message.reply(f'Here is your Invite Link {link.join_request}')
+    await message.reply(f'Here is your Invite Link {link.invite_link}')
 
 @Client.on_message(filters.command('ban_user') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
