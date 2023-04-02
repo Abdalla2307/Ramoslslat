@@ -46,7 +46,7 @@ class temp(object):
     PM_SPELL_CHECK = {}
 
 
-async def is_requested(bot, query):
+async def is_subscribed(bot, query):
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
     except UserNotParticipant:
