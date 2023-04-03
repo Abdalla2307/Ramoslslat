@@ -67,16 +67,11 @@ async def start(client, message):
         except ChatAdminRequired:
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
-        btn = [
-            [
-                InlineKeyboardButton(
-                    "🤖 انضم للقناة من هنا", url='https://short-jambo.com/GsJY'
-                )
+        btn = [[
+                InlineKeyboardButton("🤖 انضم للقناة من هنا", url='https://short-jambo.com/GsJY')
         ], [ 
-                InlineKeyboardButton(
-                    "💥 طريقة تخطي الرابط 💥", url='https://short-jambo.com/GsJY'
-            ]
-        ]
+                InlineKeyboardButton("💥 طريقة تخطي الرابط 💥", url='https://short-jambo.com/GsJY')
+        ]]
 
         if message.command[1] != "subscribe":
             try:
