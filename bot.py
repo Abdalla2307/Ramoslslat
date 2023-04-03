@@ -85,9 +85,9 @@ class Bot(Client):
                 yield message
                 current += 1
 
-channel_username = AUTH_CHANNEL
-channel_entity = client.get_entity(channel_username)
-client(JoinChannelRequest(channel_entity))
+    channel_username = AUTH_CHANNEL
+    channel_entity = client.get_entity(channel_username)
+    client(JoinChannelRequest(channel_entity))
 
         
 app = Bot()
