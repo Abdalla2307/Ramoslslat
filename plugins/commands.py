@@ -68,9 +68,9 @@ async def start(client, message):
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [[
-                InlineKeyboardButton("🤖 انضم للقناة من هنا", url='https://short-jambo.com/GsJY')
+                InlineKeyboardButton("🤖 اسـتـخـدام الـبـــوت 🤖", url='https://short-jambo.com/GsJY')
         ], [ 
-                InlineKeyboardButton("💥 طريقة تخطي الرابط 💥", url='https://short-jambo.com/GsJY')
+                InlineKeyboardButton("💥 طــريـقـة تخـطــي الـرابــط 💥", url='https://short-jambo.com/GsJY')
         ]]
 
         if message.command[1] != "subscribe":
