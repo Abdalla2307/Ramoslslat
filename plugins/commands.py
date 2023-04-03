@@ -70,7 +70,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 انضم للقناة من هنا", url='https://short-jambo.com/GsJY'
+                    "🤖 انضم للقناة من هنا", url='https://short-jambo.com/GsJY',
                 InlineKeyboardButton(
                     "💥 طريقة تخطي الرابط 💥", url='https://short-jambo.com/GsJY'
                 )
