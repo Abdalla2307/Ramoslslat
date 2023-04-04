@@ -42,7 +42,6 @@ async def start(client, message):
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('جـروب الـبـحــث 🔍', url='https://t.me/RamadanTV0'),
-            InlineKeyboardButton('الـطلبـات 📢', url='https://t.me/RamadanTV0'),
             InlineKeyboardButton("البحث في البوت 🔎", switch_inline_query_current_chat='') 
         ], [
             InlineKeyboardButton('إضــافــات 🧲', callback_data='help'),
@@ -94,7 +93,6 @@ async def start(client, message):
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('جـروب الـبـحــث 🔍', url='https://t.me/RamadanTV0'),
-            InlineKeyboardButton('الـطلبـات 📢', url='https://t.me/RamadanTV0'),
             InlineKeyboardButton("البحث في البوت 🔎", switch_inline_query_current_chat='') 
         ], [
             InlineKeyboardButton('إضــافــات 🧲', callback_data='help'),
