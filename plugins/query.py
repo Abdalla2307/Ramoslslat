@@ -526,7 +526,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('جـروب الـبـحــث 🔍', url='https://t.me/RamadanTV0'),
-            InlineKeyboardButton("البحث في البوت 🔎", switch_inline_query_current_chat='') 
+            InlineKeyboardButton("🔎 الحلقات الجديدة", switch_inline_query_current_chat='') 
         ], [
             InlineKeyboardButton('إضــافــات 🧲', callback_data='help'),
             InlineKeyboardButton('عـن الـبـوت 🌐', callback_data='about')
