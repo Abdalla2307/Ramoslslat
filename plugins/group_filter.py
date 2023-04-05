@@ -262,7 +262,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("<b>𝟷. تــأكد من كتابة المسلسل بالطريقة الصحيحة مثل\n<i>  مسلسل الكبير - مسلسل الاجهر - مسلسل الطيارة</i>\n\n𝟸. لو مش لاقي المسلسل الادمن هيضيفه في اسرع وقت</b>", reply_to_message_id=msg.id)
+await msg.reply("<b>𝟷. تــأكد من كتابة اسم المسلسل\n2. تــأكد من اضافة كلمة "مسلسل" قبل الاسم او "اي رقم"\n\n3. لو مش لاقي المسلسل الادمن هيضيفه في اسرع وقت</b>", reply_to_message_id=msg.id)
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
