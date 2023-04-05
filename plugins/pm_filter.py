@@ -60,9 +60,7 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
 
     btn.insert(0,
         [
-                InlineKeyboardButton(f'مش لاقي المسلسل', 'معلومة'),
-                InlineKeyboardButton(f'معلومة', 'مش لاقي المسلسل')
-        ]
+                InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')        ]
     )
 
     if offset != "":
