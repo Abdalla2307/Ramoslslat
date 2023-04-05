@@ -149,7 +149,7 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
-    imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
+    imdb = await get_poster(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg") else None
     TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
@@ -187,8 +187,6 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         cap = f"✅ <b>المسلسل جاهز\n\n⚡ الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n\n⚠️ يتم حذف الرسالة تلقائي بعد ثواني</b>"
-        try:
-            hehe = await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
