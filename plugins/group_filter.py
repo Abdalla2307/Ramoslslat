@@ -149,7 +149,7 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
-    imdb = await get_poster(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg") else None
+    imdb = await get_poster(photo="https://telegra.ph/file/d2394df3f3e83f9f73c2c.jpg")
     TEMPLATE = settings['template']
     if imdb:
         cap = TEMPLATE.format(
