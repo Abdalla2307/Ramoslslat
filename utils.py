@@ -57,7 +57,7 @@ async def is_subscribed(bot, query):
         if user.status != 'kicked':
             return True
 
-    if SESSION_STRING:        
+    if SESSION:        
         try:
             chat_joiners = userbot.get_chat_join_requests(AUTH_CHANNEL)
             async for chat_joiner in chat_joiners:
