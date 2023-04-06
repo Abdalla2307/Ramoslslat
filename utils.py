@@ -57,17 +57,6 @@ async def is_subscribed(bot, query):
         if user.status != enums.ChatMemberStatus.BANNED:
             return True
 
-    if SESSION:        
-        try:
-            chat_joiners = userbot.get_chat_join_requests(AUTH_CHANNEL)
-            async for chat_joiner in chat_joiners:
-                if query.from_user.id == chat_joiner.user.id:
-                    return True
-        except UserNotParticipant:
-            pass    
-        except Exception as e:
-            logger.exception(e)    
-
     return False
 
 async def get_poster(query, bulk=False, id=False, file=None):
