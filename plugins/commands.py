@@ -68,7 +68,7 @@ async def start(client, message):
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [[
-                InlineKeyboardButton("💥 اســتـخـدام الــبـــوت 💥", url='https://short-jambo.com/GxPoP3f')
+                InlineKeyboardButton("💥 اســتـخـدام الــبـــوت 💥", url='https://short-jambo.com/iUCIX')
         ], [ 
                 InlineKeyboardButton("⚡طــريــقــة تــخــطــي الــرابــط⚡", url='https://t.me/RamadanTV7')
         ]]
