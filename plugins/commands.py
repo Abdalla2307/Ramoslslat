@@ -70,7 +70,7 @@ async def start(client, message):
         btn = [[
                 InlineKeyboardButton("💥 اســتـخـدام الــبـــوت 💥", url='https://short-jambo.com/iUCIX')
         ], [ 
-                InlineKeyboardButton("⚡طــريــقــة تــخــطــي الــرابــط⚡", url='https://t.me/shortenli')
+                InlineKeyboardButton("⚡طــريــقــة تــخــطــي الــرابــط⚡", url='https://t.me/ramadantv7')
         ]]
 
 
