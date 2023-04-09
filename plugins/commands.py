@@ -68,7 +68,7 @@ async def start(client, message):
             logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [[
-                InlineKeyboardButton("💥 اســتـخـدام الــبـــوت 💥", url='https://short-jambo.com/iUCIX')
+                InlineKeyboardButton("💥 اســتـخـدام الــبـــوت 💥", url='https://short-jambo.com/ZUzh')
         ], [ 
                 InlineKeyboardButton("⚡طــريــقــة تــخــطــي الــرابــط⚡", url='https://t.me/shortenli')
         ]]
@@ -78,9 +78,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" ليه لازم اتخطي الرابط 🔓", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("محاولة مرة أخري ", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" ليه لازم اتخطي الرابط 🔓", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("محاولة مرة أخرى ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text=FORCE_SUB_TEXT,
