@@ -898,11 +898,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
             return 
         if status == "True":
-            await save_group_settings(grpid, set_type, False)
+              await save_group_settings(grpid, IMDB_DELET_TIME, set_type, False)
         else:
-            await save_group_settings(grpid, set_type, True)
+            await save_group_settings(grpid, IMDB_DELET_TIME, set_type, True)
         settings = await get_settings(grpid)
-        if settings is not None:
+        if settings['IMDB_DELET_TIME']:
             buttons = [[
                 InlineKeyboardButton('𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐔𝐓𝐓𝐎𝐍', callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}'),
                 InlineKeyboardButton('𝐒𝐈𝐍𝐆𝐋𝐄' if settings["button"] else '𝐃𝐎𝐔𝐁𝐋𝐄',  callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}')
@@ -923,7 +923,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["pm_spell_check"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#pm_spell_check#{settings["pm_spell_check"]}#{str(grp_id)}')
                 ],[
                 InlineKeyboardButton('𝐖𝐄𝐋𝐂𝐎𝐌𝐄', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
-                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["welcome"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')               
+                InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["welcome"] else '🗑️ 𝐍𝐎', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')      
+                ],[
+                InlineKeyboardButton('𝖠𝗎𝗍𝗈 𝖣𝖾𝗅𝖾𝗍𝖾', callback_data=f'setgs#imdb_delet_time#{settings["imdb_delet_time"]}#{str(grp_id)}'),
+                InlineKeyboardButton('5 𝖬𝗂𝗇' if settings["imdb_delet_time"] else '❌ 𝖮𝖿𝖿',callback_data=f'setgs#imdb_delet_time#{settings["imdb_delet_time"]}#{str(grp_id)}')         
             ]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
