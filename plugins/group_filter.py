@@ -199,7 +199,7 @@ async def auto_filter(client, msg, spoll=False):
                     grpid = await active_connection(str(message.from_user.id))
                     await save_group_settings(grpid, 'imdb_delet_time', True)
                     settings = await get_settings(message.chat.id)
-                    if settings['auto_delete']:
+                    if settings['imdb_delet_time']:
                         await asyncio.sleep(20)
                         await hehe.delete()
                         await message.delete()
