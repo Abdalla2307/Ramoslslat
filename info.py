@@ -69,7 +69,7 @@ P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 PM_IMDB = environ.get('PM_IMDB', "False")
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_name}</b>\n\n⚙️ <b>الـحـجـم</b> {file_size}\n\n||👋 مرحبا {mention} لاتنسي مشاركة الجروب||\n❍ <b>[جـروب البحث 🔍](https://t.me/RamadanTV0)</b>\n❍ <b>[مسلسلات رمضان 🌙](https://t.me/ElKberAwyBot)</b>")
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>{file_name}</b>\n\n⚙️ <b>الـحـجـم</b> {file_size}\n\n||👋 مرحبا {mention} لاتنسي مشاركة الجروب||\n❍ <b>[جـروب البحث 🔍](https://t.me/RamadanTV3)</b>\n❍ <b>[مسلسلات رمضان 🌙](https://t.me/TV01234Bot)</b>")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "✅ <b>المسلسل جاهز\n\n⚡ الحلقات الجديدة هتنزل يوميا لو مش لاقيها استني شوية وابحث تاني\n\n🔗 بعد تخطي الرابط يرسل لك البوت الحلقه\n\n<a href=https://t.me/Ramadan_Series7/><b>لمشاهدة الحلقات القديمة كاملة اضغط هنا</b></a></b>")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
