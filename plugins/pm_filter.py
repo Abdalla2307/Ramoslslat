@@ -178,11 +178,11 @@ async def pm_spoll_choker(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("<b>𝟷. تــأكد من كتابة اسم المسلسل صحيح\n2. تــأكد من اضافة كلمة <u>مسلسل</u> قبل الاسم او <u>اي رقم</u> بعد الاسم\n\n3. لو مش لاقي المسلسل ابعتلنا علي الجروب\n➲ ➲ https://t.me/RamadanTV0</b>")
+        k = await msg.reply("<b>𝟷. تــأكد من كتابة اسم المسلسل صحيح\n2. تــأكد من اضافة كلمة <u>مسلسل</u> قبل الاسم او <u>اي رقم</u> بعد الاسم\n\n3. لو مش لاقي المسلسل ابعتلنا علي الجروب\n➲ ➲ https://t.me/RamadanTV3</b>")
         await asyncio.sleep(100)
         await k.delete()
         return
     temp.PM_SPELL_CHECK[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"pmspolling#{user}#{k}")] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'pmspolling#{user}#close_spellcheck')])
-    await msg.reply("<b>𝟷. تــأكد من كتابة اسم المسلسل صحيح\n2. تــأكد من اضافة كلمة <u>مسلسل</u> قبل الاسم او <u>اي رقم</u> بعد الاسم\n\n3. لو مش لاقي المسلسل ابعتلنا علي الجروب\n➲ ➲ https://t.me/RamadanTV0</b>", reply_to_message_id=msg.id)
+    await msg.reply("<b>𝟷. تــأكد من كتابة اسم المسلسل صحيح\n2. تــأكد من اضافة كلمة <u>مسلسل</u> قبل الاسم او <u>اي رقم</u> بعد الاسم\n\n3. لو مش لاقي المسلسل ابعتلنا علي الجروب\n➲ ➲ https://t.me/RamadanTV3</b>", reply_to_message_id=msg.id)
